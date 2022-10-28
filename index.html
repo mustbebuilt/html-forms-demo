@@ -1,0 +1,250 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>HTML5 Form Fields Demo</title>
+<style>
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+#container{
+	width:700px;
+	margin:auto;	
+}
+section{
+	margin-bottom:15px;
+}
+footer{
+	margin-top:15px;
+	border-top:#CCC 1px solid;
+	clear:both;
+	text-align:center;	
+}
+label, .label{
+	display:block;
+	width:350px;
+	float:left;
+	border-bottom:#CCC 1px dotted;
+	margin-bottom:15px;
+}
+label.inline, input.inline{
+	display:inline;
+	float:none;
+}
+legend{
+	font-weight:bold;
+	font-size:14px;
+	color:#333333;
+}
+fieldset{
+	margin-bottom:20px;
+	padding:5px 5px 15px 15px;
+}
+input.textfield{
+	width:250px;
+	margin-left:5px;	
+}
+input:focus, textarea:focus{
+	background-color:#B9F9B7;	
+}
+input, textarea{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+}
+textarea{
+	width:600px;	
+	height:60px;
+}
+/*p{
+	clear:left;
+}*/
+.sendButton{
+	float:none;
+    border-color: #A0D629 #567D00 #567D00 #A0D629;
+    border-right: 1px solid #567D00;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+    font-family: 'arial black',arial;
+    margin: 10px 0;
+    padding: 2px 10px;
+    text-align: center;
+    text-transform: uppercase;	
+	background-color:#567D00;
+}
+/*css for desktops here*/
+
+@media (max-device-width: 1024px) {
+  /*IPad portrait AND netbooks, AND anything with smaller screen*/
+  /*make the design flexible if possible */
+  /*Structure your code thinking about all devices that go below*/
+}
+@media (max-device-width: 640px) {
+ /*Iphone portrait and smaller*/
+}
+@media (max-device-width: 540px) {
+ /*Smaller and smaller...*/
+}
+@media (max-device-width: 320px) {
+ /*IPhone portrait and smaller. You can probably stop on 320px*/
+}
+@media (max-device-width: 640px) {
+	body{
+		font-size:14px;	
+	}
+	#container{
+		width:90%;
+		margin:auto;	
+	}
+	h1{
+		font-size:1.4em;	
+	}
+	fieldset{
+		margin:0;
+		padding:0;
+		border:none;
+	}
+  	label, .label{
+		display:block;
+		width:auto;
+		float:none;
+		border-bottom:none;
+		margin-bottom:2px;
+	}
+	label.inline, input.inline{
+		display:inline;
+		float:float;
+		width:50px;
+	}
+	input, textarea{
+		width:80%;	
+		font-size:16px;	
+		padding:5px;
+	}
+/*	input.textfield{
+		width:100%;	
+		font-size:15px;
+		margin-left:5px;	
+	}*/
+	textarea{
+		width:auto;	
+		height:auto;
+	}
+}
+</style>
+</head>
+<body>
+<div id="container">
+<header>
+  <h1>HTML5 Form Fields Demo</h1>
+</header>
+<section>
+<form method="post" action="">
+ <fieldset>
+        <legend>Personal Details</legend>
+        <p>
+            <label for="firstname">First name</label>
+            <input type="text" name="" id="firstname" placeholder="Your First Name"/>   
+        </p>   
+        <p>
+
+            <label for="surname">Surname</label>
+            <input type="text" name="" id="surname" placeholder="Your Surname"/>   
+        </p>    
+        <p>
+            <label for="Email">Email</label>
+            <input type="email" name="" id="Email" required />   
+        </p>  
+        <p>
+            <label for="Tel">Contact Telephone</label>
+            <input type="tel" name="" id="Tel" required />   
+        </p>  
+        <p>
+            <label for="mem">Membership Number</label>
+            <input type="number" name="" id="mem" required />   
+        </p> 
+        <p>
+            <label for="rate">Rate the site</label>
+            0
+            <input type="range" name=""  min="1" max="10" id="rate"  />   
+            10
+        </p> 
+        <p>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="" id="dob" />   
+        </p> 
+        <p>
+            <label for="colour">Favourite Colour</label>
+            <input type="color" name="" id="colour" />   
+        </p> 
+        <p>
+        <span class="label">Gender</span>
+
+          <label class="inline" for="Male">Male</label>
+            <input name="gender" type="radio" class="inline" id="Male" value="m" />
+          <label class="inline" for="Female">Female</label>
+            <input name="gender" type="radio" class="inline" id="Female" value="f" />
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Feedback</legend>
+
+        <p>
+            <label for="comments">Leave us your comments</label>
+            <textarea name="comments" id="comments"></textarea>
+        </p>
+     </fieldset>
+     <fieldset>
+        <legend>Marketing</legend>
+
+        <p>
+            <label for="mailingList">Join mailing list</label>
+            <input type="checkbox" name="list" id="mailingList" value="1" />
+        </p>
+        <p>
+            <label for="marketing">How did you hear about us?</label>
+            <select name="marketing" id="marketing">
+              <option value="Web">Web</option>
+
+              <option value="Friend">Friend</option>
+              <option value="Other">Other</option>
+            </select>
+        </p>
+        <p>
+            <label for="press">Where to you get your news?</label>
+        	<input list="press" />
+				<datalist id="press">
+  				<option value="Newspapers">
+                <option value="Twitter">
+ 				<option value="BuzzFeed">
+ 				<option value="Facebook"> 
+                <option value="Friends"> 				
+                <option value="TV"> 			
+  				<option value="Radio">
+				</datalist>
+        </p>
+    </fieldset>
+    <fieldset>
+    <legend>Search</legend>
+    <p>
+            <label for="search">Search</label>
+            <input type="search" name="" id="search" />   
+        </p>  
+    </fieldset>
+    
+    <p>
+    	<input type="submit" value="Send" class="sendButton" />
+    </p>
+
+</form>
+</section>
+<footer>
+&copy; mustbebuilt 2014
+</footer>
+</div>
+</body>
+</html>
