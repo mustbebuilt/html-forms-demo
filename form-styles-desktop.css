@@ -1,0 +1,50 @@
+/* CSS Document */
+.container{
+	width:700px;
+	margin:auto;	
+
+}
+fieldset>div{
+	display: flex;
+	justify-content: space-between;
+	margin:10px 0;
+}
+label, .label{
+	display:inline;
+/*	margin:0;*/
+	flex:1 1 100px;
+	border-bottom: 1px dotted #ccc;
+}
+.innerGroup{
+	display:flex;
+	flex:1 1 150px;
+}
+.innerGroup label{
+
+}
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=search], input[type=submit], textarea, select, datalist{
+	flex:1 1 400px;
+}
+/*
+section {
+    margin-bottom: 15px;
+}
+form>div {
+    margin: 10px;
+}
+fieldset{
+	margin-top:20px;
+}
+
+
+input[type=text], input[type=email], input[type=tel], input[type=number], input[type=search], input[type=submit], textarea, select, datalist{
+	width:100%;
+	padding:5px;
+}
+footer {
+    margin-top: 15px;
+    border-top: #CCC 1px solid;
+	padding-top:10px;
+    text-align: center;
+}
+*/
